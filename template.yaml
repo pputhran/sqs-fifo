@@ -46,7 +46,7 @@ Resources:
             Runtime: nodejs12.x
             MemorySize: 256
             FunctionName: 'demo-send-FIFO'
-            Role: 'arn:aws:iam::963887453151:role/lambda-general'
+            Role: 'arn:aws:iam::<account_id>:role/lambda-general'
             Environment:
                 Variables:
                     QUEUE_NAME: !Ref FifoSqsQueue 
@@ -77,7 +77,7 @@ Resources:
             Runtime: nodejs12.x
             MemorySize: 256
             FunctionName: 'demo-receive-FIFO'
-            Role: 'arn:aws:iam::963887453151:role/lambda-general'
+            Role: 'arn:aws:iam::<account_id>:role/lambda-general'
             Environment:
                 Variables:
                     QUEUE_NAME: !Ref FifoSqsQueue
